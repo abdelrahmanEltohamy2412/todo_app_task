@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => TodoBloc(TodoDatabase.instance)..add(LoadTodos()),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'To-Do App',
         theme: ThemeData(
           primarySwatch: Colors.blue,

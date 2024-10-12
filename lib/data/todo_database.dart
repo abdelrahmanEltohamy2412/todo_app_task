@@ -6,7 +6,7 @@ class TodoDatabase {
   static final TodoDatabase instance = TodoDatabase._init();
   static Database? _database;
 
-  TodoDatabase._init(); // هذا هو الـ constructor الخاص بالنمط singleton
+  TodoDatabase._init();
 
   Future<Database> get database async {
     if (_database != null) return _database!;

@@ -37,7 +37,7 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
     on<DeleteTodo>((event, emit) async {
       try {
         await database.delete(event.id);
-        add(LoadTodos());  // لإعادة تحميل القائمة بعد الحذف
+        add(LoadTodos());
       } catch (e) {
         emit(TodoError('Failed to delete todo.'));
       }
